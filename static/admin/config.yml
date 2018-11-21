@@ -1,0 +1,74 @@
+backend:
+  # Choose the backend you prefer (GitHub, GitLab, BitBucket)
+  # Reference: https://www.netlifycms.org/docs/authentication-backends/
+  name: github
+  branch: master
+  repo: mittalyashu/gridsome-starter-netlifycms
+
+media_folder: "static/images"
+public_folder: "static/images"
+
+collections:
+  - name: "blogs"
+    label: "Blogs"
+    folder: "blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "date", name: "date", widget: "date" }
+      - { label: "slug", name: "slug", widget: "string" }
+      - { label: "body", name: "body", widget: "markdown" }
+
+  - name: "data"
+    label: "Data"
+    files:
+      - name: "about"
+        label: "About"
+        file: "src/data/About.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "About" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - name: "contact"
+        label: "Contact"
+        file: "src/data/Contact.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Contact" }
+          - { label: "Description", name: "description", widget: "text" }
+
+      - name: "hero"
+        label: "Hero"
+        file: "src/data/Hero.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+
+      - name: "portfolio"
+        label: "Portfolio"
+        file: "src/data/Portfolio.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Portfolio" }
+          - name: "items"
+            label: "Work"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+
+      - name: "socialmedia"
+        label: "Social Media"
+        file: "src/data/SocialMedia.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Social Media" }
+          - name: "items"
+            label: "Social Media"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
