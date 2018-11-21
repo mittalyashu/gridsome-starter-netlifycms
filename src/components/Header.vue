@@ -8,7 +8,7 @@
         <a href="/#about">About</a>
       </li>
       <li class="Header__Profile__Image">
-        <g-link :to="{ name: 'Index' }">
+        <g-link to="/">
           <g-image src="~/assets/images/gridsome.png"/>
         </g-link>
       </li>
