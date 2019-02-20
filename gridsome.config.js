@@ -1,5 +1,5 @@
 module.exports = {
-	siteName: 'Gridsome NetlifyCMS Starter Kit',
+	siteName: 'Gridsome Starter NetlifyCMS',
 	siteUrl: 'https://www.gridsome.org',
 	siteDescription: 'Gridsome is a blazing-fast static site generator...',
 	titleTemplate: `%s - Gridsome`,
