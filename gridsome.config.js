@@ -3,6 +3,7 @@ module.exports = {
 	siteUrl: 'https://www.gridsome.org',
 	siteDescription: 'Gridsome is a blazing-fast static site generator...',
 	titleTemplate: `%s - Gridsome`,
+	port: '1000',
 	plugins: [
 		{
 			use: '@gridsome/source-filesystem',
@@ -11,12 +12,6 @@ module.exports = {
 				typeName: 'BlogPost',
 				route: '/blog/:slug'
 			}
-		},
-		// {
-		// 	use: '@gridsome/source-filesystem',
-		// 	options: {
-		// 		path: 'data/*.yml',
-		// 	}
-		// }
+		}
 	]
 }
