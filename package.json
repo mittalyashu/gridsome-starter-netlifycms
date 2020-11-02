@@ -9,7 +9,7 @@
 		"@gridsome/source-filesystem": "^0.6.0",
 		"@gridsome/transformer-remark": "^0.3.3",
 		"gridsome": "^0.7.1",
-		"node-sass": "^4.11.0",
+		"node-sass": "^5.0.0",
 		"sass-loader": "^8.0.0"
 	},
 	"license": "MIT"
